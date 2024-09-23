@@ -117,6 +117,29 @@ public class Work {
 			System.out.println("Los dos numeros son iguales");
 		}
 		System.out.println();
-	}
 
-}
+		System.out.println("Actividad 10");
+		System.out.println();
+		System.out.println("Introduzca el primer numero: ");
+		double n1 = reader.nextDouble();
+		System.out.println("Introduzca el segundo numero: ");
+		double n2 = reader.nextDouble();
+		System.out.println("Introduzca el tercer numero: ");
+		double n3 = reader.nextDouble();
+
+		double mayor;
+
+		if(n1 > n2 && n1 > n3)
+		{
+			mayor = n1;
+		}else if (n2 > n1 && n2 > n3)
+		{
+			mayor = n2;
+		}else
+		{
+			mayor = n3;
+		}
+		System.out.println("El mayor numero es: " + mayor);
+		System.out.println();
+	}//main
+}//class
