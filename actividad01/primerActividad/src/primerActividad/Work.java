@@ -116,10 +116,7 @@ public class Work {
 		}else{
 			System.out.println("Los dos numeros son iguales");
 		}
-
-		
-
-
+		System.out.println();
 	}
 
 }
