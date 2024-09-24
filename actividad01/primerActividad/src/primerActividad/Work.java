@@ -23,7 +23,7 @@ public class Work {
 		
 		System.out.println("Actividad 3");
 		System.out.println();
-		System.err.println("Introduzca el area del cuadrado: ");
+		System.out.println("Introduzca el area del cuadrado: ");
 		double lado2 = reader.nextDouble();
 		double area2 = lado2 * lado2;
 		
@@ -141,5 +141,61 @@ public class Work {
 		}
 		System.out.println("El mayor numero es: " + mayor);
 		System.out.println();
+
+		System.out.println("Ejercico 11");
+		System.out.println();
+		System.out.println("Escriba el primer numero: ");
+		double numA = reader.nextDouble();
+		System.out.println("Escriba el segundo numero: ");
+		double numB = reader.nextDouble();
+
+		double suma2 = numA + numB;
+		System.out.println("Su suma es: " + suma2);
+
+		double resta2 = numA - numB;
+		System.out.println("Su resta es: " + resta2);
+
+		double multi2 = numA * numB;
+		System.out.println("Su producto es: " + multi2);
+
+		if(numB != 0)
+		{
+			double div2 = numA / numB;
+			System.out.println("Su division es: " + div2);
+		}else
+		{
+			System.out.println("Incorrecto: No se puede dividir por cero.");
+		}
+		System.out.println();
+
+		System.out.println("Ejercicio 12");
+		System.out.println();
+		System.out.println("Introduzca el primer numero: ");
+		double primer = reader.nextDouble();
+		System.out.println("Introduzca el segundo numero: ");
+		double segundo = reader.nextDouble();
+
+		if(primer > segundo)
+		{
+			System.out.println("El numero mayor es: " + primer);
+		}else{
+			System.out.println("El numero mayor es: " + segundo);
+		}
+		System.out.println();
+
+		System.out.println("Ejercicio 13");
+		System.out.println();
+		System.out.println("Ingrese el numero: ");
+		double uno = reader.nextDouble();
+
+		if(uno >= 0)
+		{
+			System.out.println("El numero es positivo.");
+		}else
+		{
+			System.out.println("El numero es negativo.");
+		}
+		System.out.println();
+		reader.close();
 	}//main
 }//class
