@@ -15,6 +15,7 @@ public class Work {
 		
 		System.out.println("Actividad 2");
 		System.out.println();
+		
 		double lado = 5;
 		double area = lado * lado;
 		
@@ -23,6 +24,8 @@ public class Work {
 		
 		System.out.println("Actividad 3");
 		System.out.println();
+		reader = new Scanner(System.in);
+
 		System.out.println("Introduzca el area del cuadrado: ");
 		double lado2 = reader.nextDouble();
 		double area2 = lado2 * lado2;
@@ -32,6 +35,8 @@ public class Work {
 		
 		System.out.println("Actividad 4");
 		System.out.println();
+		reader = new Scanner(System.in);
+
 		System.out.println("Introduzca el primer numero: ");
 		double num1 = reader.nextDouble();
 		
@@ -51,6 +56,8 @@ public class Work {
 		
 		System.out.println("Actividad 5");
 		System.out.println(); 
+		reader = new Scanner(System.in);
+
 		System.out.println("Introduce el radio: ");
 		double radio = reader.nextDouble();
 
@@ -61,6 +68,8 @@ public class Work {
 
 		System.out.println("Actividad 6");
 		System.out.println();
+		reader = new Scanner(System.in);
+
 		System.out.println("Introduzca el precio del articulo: ");
 		double precio = reader.nextDouble();
 
@@ -74,6 +83,8 @@ public class Work {
 
 		System.out.println("Actividad 7");
 		System.out.println();
+		reader = new Scanner(System.in);
+
 		System.out.println("Introduzca la distancia de millas marinas: ");
 		double millasMarinas = reader.nextDouble();
 
@@ -84,66 +95,57 @@ public class Work {
 
 		System.out.println("Actividad 8");
 		System.out.println();
+		reader = new Scanner(System.in);
+
 		System.out.println("Introduzca el primer numero: ");
-		double number1 = reader.nextDouble();
+		int number1 = reader.nextInt();
 
 		System.out.println("Introduzca el segundo numero: ");
-		double number2 = reader.nextDouble();
+		int number2 = reader.nextInt();
 
-		if(number1 > number2)
-		{
-			System.out.println("El orden ascendente empieza con: " + number1 + "," + number2);
-		}else
-		{
-			System.out.println("El orden ascendente empieza con: " + number2 + "," + number1);
-		}
+        //Usando la clase Math.min y Math.max.
+		int menor = Math.min(number1, number2);
+		int mayor = Math.max(number1, number2);
+
+		System.out.println("Los numeros en orden ascendente son: " + menor + "; " + mayor);
 		System.out.println();
 
 		System.out.println("Actividad 9");
 		System.out.println();
+		reader = new Scanner(System.in);
+
 		System.out.println("Introduce el primer numero: ");
-		double numero1 = reader.nextDouble();
+		int numero1 = reader.nextInt();
 		
 		System.out.println("Introduce el segundo numero: ");
-		double numero2 = reader.nextDouble();
+		int numero2 = reader.nextInt();
 
-		if(numero1 > numero2)
-		{
-			System.out.println("El numero mayor es: " + numero1);
-		}else if (numero2 > numero1)
-		{
-			System.out.println("El numero mayor es: " + numero2);
-		}else{
-			System.out.println("Los dos numeros son iguales");
-		}
+		int mayor1 = Math.max(numero1, numero2);
+
+		System.out.println("El mayor numero es: " + mayor1);
+		System.out.println("¿Los dos numeros son iguales? \n" + (numero1 == numero2));
 		System.out.println();
 
 		System.out.println("Actividad 10");
 		System.out.println();
+		reader = new Scanner(System.in);
+
 		System.out.println("Introduzca el primer numero: ");
-		double n1 = reader.nextDouble();
+		int n1 = reader.nextInt();
 		System.out.println("Introduzca el segundo numero: ");
-		double n2 = reader.nextDouble();
+		int n2 = reader.nextInt();
 		System.out.println("Introduzca el tercer numero: ");
-		double n3 = reader.nextDouble();
+		int n3 = reader.nextInt();
 
-		double mayor;
+		int mayor2 = Math.max(n1, Math.max(n2, n3));
 
-		if(n1 > n2 && n1 > n3)
-		{
-			mayor = n1;
-		}else if (n2 > n1 && n2 > n3)
-		{
-			mayor = n2;
-		}else
-		{
-			mayor = n3;
-		}
-		System.out.println("El mayor numero es: " + mayor);
+		System.out.println("El mayor numero es: " + mayor2);
 		System.out.println();
 
 		System.out.println("Ejercico 11");
 		System.out.println();
+		reader = new Scanner(System.in);
+
 		System.out.println("Escriba el primer numero: ");
 		double numA = reader.nextDouble();
 		System.out.println("Escriba el segundo numero: ");
@@ -158,29 +160,28 @@ public class Work {
 		double multi2 = numA * numB;
 		System.out.println("Su producto es: " + multi2);
 
-		if(numB != 0)
+		/*if(numB != 0)
 		{
 			double div2 = numA / numB;
 			System.out.println("Su division es: " + div2);
 		}else
 		{
 			System.out.println("Incorrecto: No se puede dividir por cero.");
-		}
+		}*/
 		System.out.println();
 
 		System.out.println("Ejercicio 12");
 		System.out.println();
-		System.out.println("Introduzca el primer numero: ");
-		double primer = reader.nextDouble();
-		System.out.println("Introduzca el segundo numero: ");
-		double segundo = reader.nextDouble();
+		reader = new Scanner(System.in);
 
-		if(primer > segundo)
-		{
-			System.out.println("El numero mayor es: " + primer);
-		}else{
-			System.out.println("El numero mayor es: " + segundo);
-		}
+		System.out.println("Introduzca el primer numero: ");
+		int primer = reader.nextInt();
+		System.out.println("Introduzca el segundo numero: ");
+		int segundo = reader.nextInt();
+
+		int mayor3 = Math.max(primer, segundo);
+
+		System.out.println("El numero mayor es: " + mayor3);
 		System.out.println();
 
 		System.out.println("Ejercicio 13");
@@ -188,14 +189,14 @@ public class Work {
 		System.out.println("Ingrese el numero: ");
 		double uno = reader.nextDouble();
 
-		if(uno >= 0)
+		/*if(uno >= 0)
 		{
 			System.out.println("El numero es positivo.");
 		}else
 		{
 			System.out.println("El numero es negativo.");
 		}
-		System.out.println();
+		System.out.println();*/
 		reader.close();
 	}//main
 }//class
