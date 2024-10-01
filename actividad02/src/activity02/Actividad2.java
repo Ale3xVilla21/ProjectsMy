@@ -1,4 +1,4 @@
-package actividad01;
+package activity02;
 
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ public class Actividad2 {
 		System.out.println("Escriba su edad: ");
 		double edad2 = sc.nextDouble();
 		
-		if(edad2 >17) {
+		if(edad2 > 17) {
 			System.out.println("Eres mayor de edad.");
 		}else {
 			System.out.println("Eres menor de edad.");
@@ -43,7 +43,7 @@ public class Actividad2 {
 		System.out.println();
 		
 		for(int i = 2; i <= 200; i += 2) {
-			System.out.println("numero par: " + i);
+			System.out.println("numero: " + i);
 		}
 		System.out.println();
 		
@@ -55,6 +55,38 @@ public class Actividad2 {
 			if(i % 2 == 0) {
 				System.out.println("Numero par: " + i);
 			}
+		}
+		System.out.println();
+		
+		System.out.println("Ejercicio 6");
+		System.out.println();
+		sc = new Scanner(System.in);
+		
+		System.out.println("Ingrese el numero: ");
+		int n = sc.nextInt();
+		
+		for(int i = 1;i <= n; i++) {
+			System.out.println("numero: " + i);
+		}
+		System.out.println();
+		
+		System.out.println("Ejercicio 7");
+		System.out.println();
+		sc = new Scanner(System.in);
+		
+		System.out.println("Introduzca su calificacion entre 0 y 10: ");
+		int nota = sc.nextInt();
+		
+		if(nota < 3) {
+			System.out.println("Muy deficiente.");
+		}else if(nota < 5){
+			System.out.println("Insuficiente.");
+		}else if(nota < 6) {
+			System.out.println("Bien.");
+		}else if(nota < 9) {
+			System.out.println("Notable.");
+		}else{
+			System.out.println("Sobresaliente.");
 		}
 		System.out.println();
 	}//Main

@@ -61,9 +61,9 @@ public class Work {
 		System.out.println("Introduce el radio: ");
 		double radio = reader.nextDouble();
 
-		System.out.println("La longitud de la circunferencia es: " + radio * 2 * Math.PI);
+		System.out.println("La longitud de la circunferencia es: " + radio * Math.PI * 2);
 		System.out.println("El area del circulo es: " + Math.PI * Math.pow(radio, 2));
-		System.out.println("El volumen de la esfera es: " + 4 / 3 * Math.PI * Math.pow(radio, 3));
+		System.out.println("El volumen de la esfera es: " + Math.PI * Math.pow(radio, 3) * 4/3);
 		System.out.println();
 
 		System.out.println("Actividad 6");
@@ -71,12 +71,12 @@ public class Work {
 		reader = new Scanner(System.in);
 
 		System.out.println("Introduzca el precio del articulo: ");
-		double precio = reader.nextDouble();
+		double precioVenta = reader.nextDouble();
 
 		System.out.println("Introduzca el precio de venta real: ");
-		double venta = reader.nextDouble();
+		double precioReal = reader.nextDouble();
 
-		double descuento = ((precio - venta) / precio) * 100;
+		double descuento = ((precioVenta - precioReal)* 100 / precioVenta);
 
 		System.out.println("El porcentaje del descuento realizado es: " + descuento + "%");
 		System.out.println();
@@ -98,14 +98,14 @@ public class Work {
 		reader = new Scanner(System.in);
 
 		System.out.println("Introduzca el primer numero: ");
-		int number1 = reader.nextInt();
+		double number1 = reader.nextDouble();
 
 		System.out.println("Introduzca el segundo numero: ");
-		int number2 = reader.nextInt();
+		double number2 = reader.nextDouble();
 
         //Usando la clase Math.min y Math.max.
-		int menor = Math.min(number1, number2);
-		int mayor = Math.max(number1, number2);
+		double menor = Math.min(number1, number2);
+		double mayor = Math.max(number1, number2);
 
 		System.out.println("Los numeros en orden ascendente son: " + menor + "; " + mayor);
 		System.out.println();
@@ -115,12 +115,12 @@ public class Work {
 		reader = new Scanner(System.in);
 
 		System.out.println("Introduce el primer numero: ");
-		int numero1 = reader.nextInt();
+		double numero1 = reader.nextDouble();
 		
 		System.out.println("Introduce el segundo numero: ");
-		int numero2 = reader.nextInt();
+		double numero2 = reader.nextDouble();
 
-		int mayor1 = Math.max(numero1, numero2);
+		double mayor1 = Math.max(numero1, numero2);
 
 		System.out.println("El mayor numero es: " + mayor1);
 		System.out.println("¿Los dos numeros son iguales? \n" + (numero1 == numero2));
@@ -131,13 +131,13 @@ public class Work {
 		reader = new Scanner(System.in);
 
 		System.out.println("Introduzca el primer numero: ");
-		int n1 = reader.nextInt();
+		double n1 = reader.nextDouble();
 		System.out.println("Introduzca el segundo numero: ");
-		int n2 = reader.nextInt();
+		double n2 = reader.nextDouble();
 		System.out.println("Introduzca el tercer numero: ");
-		int n3 = reader.nextInt();
+		double n3 = reader.nextDouble();
 
-		int mayor2 = Math.max(n1, Math.max(n2, n3));
+		double mayor2 = Math.max(Math.max(n2, n3),n1);
 
 		System.out.println("El mayor numero es: " + mayor2);
 		System.out.println();
@@ -160,14 +160,11 @@ public class Work {
 		double multi2 = numA * numB;
 		System.out.println("Su producto es: " + multi2);
 
-		/*if(numB != 0)
-		{
-			double div2 = numA / numB;
-			System.out.println("Su division es: " + div2);
-		}else
-		{
-			System.out.println("Incorrecto: No se puede dividir por cero.");
-		}*/
+		boolean error = (numB == 0);
+		System.out.println(error + " Error, no se puede dividir porque seria indeterminado.");
+
+		double div2 = numA / numB;
+		System.out.println("Su division es: " + div2);
 		System.out.println();
 
 		System.out.println("Ejercicio 12");
@@ -175,11 +172,11 @@ public class Work {
 		reader = new Scanner(System.in);
 
 		System.out.println("Introduzca el primer numero: ");
-		int primer = reader.nextInt();
+		double primer = reader.nextDouble();
 		System.out.println("Introduzca el segundo numero: ");
-		int segundo = reader.nextInt();
+		double segundo = reader.nextDouble();
 
-		int mayor3 = Math.max(primer, segundo);
+		double mayor3 = Math.max(primer, segundo);
 
 		System.out.println("El numero mayor es: " + mayor3);
 		System.out.println();
@@ -189,14 +186,8 @@ public class Work {
 		System.out.println("Ingrese el numero: ");
 		double uno = reader.nextDouble();
 
-		/*if(uno >= 0)
-		{
-			System.out.println("El numero es positivo.");
-		}else
-		{
-			System.out.println("El numero es negativo.");
-		}
-		System.out.println();*/
+		System.out.println((uno > 0) + " El numero es positivo.");
+		System.out.println((uno < 0) + " El numero es negativo.");
 		reader.close();
 	}//main
 }//class
