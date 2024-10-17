@@ -242,5 +242,126 @@ public class Activity04 {
 		System.out.println("Ejercicio 09");
 		System.out.println();
 		
+		int[] numbers = new int[100];//Crear un array de 100 enteros
+		
+		//Llenar el array con valores enteros aleatorios entre 1 y 10
+		for(int i = 0; i < numeros.length; i++) {
+			numbers[i] = (int) (1 + Math.random() + 10);//Genera un numero entre 1 y 10
+		}
+		
+		reader = new Scanner(System.in);
+		System.out.println("Introduzca un valor entero N: ");
+		int n2 = reader.nextInt();
+		
+		//Mostrara en que posiciones del array aparece N
+		System.out.println("El valor " + n2 + " aparece en las siguientes posiciones: ");
+		boolean encontrado = false;
+		for(int i = 0; i < numeros.length; i++) {
+			if(numeros[i] == n2) {
+				System.out.println(i + " ");
+				encontrado = true;
+			}
+		}
+		System.out.println();
+		
+		System.out.println("Ejercicio 10");
+		System.out.println();
+		
+		reader = new Scanner(System.in);
+		
+		System.out.println("Introduce el numero de personas: ");
+		int persona = reader.nextInt();
+		
+		//Crea un array para almacenar las alturas
+		double[] alturas = new double[persona];
+		
+		//Rellenar el array con las alturas introducidas por el usuario
+		for(int i = 0; i < persona; i++) {
+			System.out.println("Introduce la altura de la persona " + (i + 1) + " (en metros): ");
+			alturas[i] = reader.nextDouble();
+		}
+		
+		//Calcular la altura media
+		double sumaAltura = 0;
+	
+		for(int i = 0; i < persona; i++) {
+			sumaAltura += alturas[i];
+		}
+		double mediaAltura = sumaAltura / persona;
+		
+		//Encontrar la altura minima y maxima
+		double alturaMinima = alturas[0];
+		double alturaMaxima = alturas[0];
+		
+		for(int i = 1; i < persona; i++) {
+			if(alturas[i] < alturaMinima) {
+				alturaMinima = alturas[i];
+			}
+			if(alturas[i] > alturaMaxima) {
+				alturaMaxima = alturas[i];
+			}
+		}
+		
+		//Contar cuantas personas estan por encima y por debajo de la media
+		int porEncimaMedia = 0;
+		int porDebajoMedia = 0;
+		
+		for(int i = 0; i < persona; i++) {
+			
+			if(alturas[i] > mediaAltura) {
+				porEncimaMedia++;
+			}else if(alturas[i] < mediaAltura) {
+				porDebajoMedia++;
+				
+			}
+		}
+		
+		//Mostrar los resultados
+		System.out.println("Resultados: ");
+		System.out.println("Altura media: " + mediaAltura);
+		System.out.println("Altura minima: " + alturaMinima);
+		System.out.println("Altura maxima: " + alturaMaxima);
+		System.out.println("Personas por encima de la media: " + porEncimaMedia);
+		System.out.println("Personas por debajo de la media: " + porDebajoMedia);
+		System.out.println();
+		
+		System.out.println("Ejercicio 11");
+		System.out.println();
+		
+		//Crear dos arrays de 100
+		int[] arrayA = new int[100];
+		int[] arrayB = new int[100];
+		
+		//Llenar el primer array con valores del 1 al 100
+		for(int i = 0; i < arrayA.length; i++) {
+			arrayA[i] = i + 1;
+		}
+		
+		//Seguir el mismo patron del primer array al segundo array en orden inverso
+		for(int i = 0; i < arrayA.length; i++){
+			arrayB[i] = arrayA[arrayA.length - 1 - i];
+		}
+		
+		//Mostrar el primer array 
+		System.out.println("Primer array: ");
+		for(int i = 0; i < arrayA.length; i++) {
+			System.out.println(arrayA[i] + " ");
+		}
+		
+		//Salto de linea para separar los arrays
+		System.out.println("Segundo Array: ");
+		for(int i = 0; i < arrayB.length; i++) {
+			System.out.println(arrayB[i] + " ");
+		}
+		System.out.println();
+		
+		System.out.println("Ejercicio 12");
+		System.out.println();
+		
+		
+		
+		
+		
+		
 	}//Main
 }//Class
