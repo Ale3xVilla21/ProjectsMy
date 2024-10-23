@@ -358,9 +358,67 @@ public class Activity04 {
 		System.out.println("Ejercicio 12");
 		System.out.println();
 		
+		//Crear un array de 10 enteros
+		int[] numero3 = new int[10];
 		
+		//Inicializar el array con valores predeterminados
+		for(int i = 0; i < numeros.length; i++) {
+			numeros[i] = 0;//Poner 0 en cada posicion del array
+		}
 		
+		//Usamos un objeto Scanner para leer las opciones del usuario
+		reader = new Scanner(System.in);
+		int opcion;
 		
+		//Bucle del menu
+		do {
+			//Mostrar el menu
+			System.out.println("Menu:");
+			System.out.println("1. Mostrar valores");
+			System.out.println("2. Introducir un valor");
+			System.out.println("3.Salir");
+			System.out.print("Elige una opcion: ");
+			
+			//Leer la opcion que el usuario elija
+			opcion = reader.nextInt();
+			
+			//Evaluar la opcion elegida por el usuario
+			switch (opcion) {
+			case 1:
+				System.out.println("Valores: ");
+				for(int i = 0; i < numero3.length; i++) {
+					System.out.println("Posicion " + i + ": " + numero3[i]);
+				}
+				break;
+				
+			case 2:
+				System.out.println("Introduce el valor que quieres poner: ");
+				int nuevoValor = reader.nextInt();
+				System.out.println("¿En que posicion quieres poner el valor?");
+				int posicion = reader.nextInt();
+				
+				//Verificar que la posicion sea valida
+				if (posicion >= 0 && posicion < numeros.length) {
+					numero3[posicion] = nuevoValor; //Poner el valor en la posicion indicada
+					System.out.println("Valor actualizado.");
+				}else {
+					System.out.println("Posicion no valida, por favor debe ser un numero entre 0 y 9.");
+				}
+				break;
+				
+			case 3:
+				System.out.println("Saliendo del programa. ¡Hasta luego!"); //Saliendo del programa
+				break;
+				
+			default:
+				System.out.println("Opcion no valida. Por favor elija una opcion valida.");
+				break;
+			}
+		}while (opcion != 3); //Repetir el menu hasta que el usuario elija la opcion 3 para salir
+		
+		System.out.println("Ejercicio 13");
+		System.out.println();
+ 		
 		
 		
 	}//Main
