@@ -415,11 +415,5 @@ public class Activity04 {
 				break;
 			}
 		}while (opcion != 3); //Repetir el menu hasta que el usuario elija la opcion 3 para salir
-		
-		System.out.println("Ejercicio 13");
-		System.out.println();
- 		
-		
-		
 	}//Main
 }//Class
